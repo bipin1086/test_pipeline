@@ -11,6 +11,5 @@ jobs:
     public: true
     plan:
       - get: test_repository
-      - task:
-          name: hello-world
-          file: ./test_pipeline/tasks/hello-world.yml
+      - task: hello-world
+        file: test_pipeline/tasks/hello-world.yml
