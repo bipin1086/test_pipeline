@@ -1,0 +1,11 @@
+---
+platform: linux
+
+image_resources:
+  type: docker_image
+  source: {repository: busybox}
+
+run:
+  path: echo
+  args:
+    - hello world
