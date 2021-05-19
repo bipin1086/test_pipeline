@@ -1,8 +1,8 @@
 ---
 platform: linux
 
-image_resources:
-  type: docker_image
+image_resource:
+  type: docker-image
   source: {repository: busybox}
 
 run:
