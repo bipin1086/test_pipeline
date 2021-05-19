@@ -3,8 +3,8 @@ resources:
   - name: test_repository
     type: git
     source:
-      uri: 
-      branch: master
+      uri: https://github.com/bipin1086/test_pipeline.git
+      branch: main
 
 jobs:
   - name: job-hello-world
