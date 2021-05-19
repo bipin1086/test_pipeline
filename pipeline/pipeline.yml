@@ -1,6 +1,6 @@
 ---
 resources:
-  - name: test_repository
+  - name: test-repository
     type: git
     source:
       uri: https://github.com/bipin1086/test_pipeline.git
@@ -10,6 +10,6 @@ jobs:
   - name: job-hello-world
     public: true
     plan:
-      - get: test_repository
+      - get: test-repository
       - task: hello-world
-        file: test_pipeline/tasks/hello-world.yml
+        file: test-repository/tasks/hello-world.yml
