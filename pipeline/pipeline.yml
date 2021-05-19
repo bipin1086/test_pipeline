@@ -5,12 +5,18 @@ resources:
     source:
       uri: https://github.com/bipin1086/test_pipeline.git
       branch: main
-
+  - name: my-timer
+    type: time 
+    source:
+      interval: 2m
+      
 jobs:
   - name: job-hello-world
     public: true
+    serial: true
     plan:
       - get: test-repository
+      - get: my-timer
         trigger: true
       - task: hello-world
         file: test-repository/tasks/hello-world.yml
