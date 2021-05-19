@@ -11,5 +11,6 @@ jobs:
     public: true
     plan:
       - get: test-repository
+        trigger: true
       - task: hello-world
         file: test-repository/tasks/hello-world.yml
